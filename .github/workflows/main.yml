@@ -41,7 +41,7 @@ jobs:
       - name: goreleaser
         run: |
           echo "${{ github.token }}" | docker login https://ghcr.io -u ${GITHUB_ACTOR} --password-stdin
-          make release
+          GIT_OWNER=${GITHUB_ACTOR} make release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_OWNER: ${{ secrets.GITHUB_ACTOR }}
