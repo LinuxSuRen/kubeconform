@@ -44,4 +44,4 @@ jobs:
           make release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_OWNER: ${{ env.GITHUB_ACTOR }}
+          GIT_OWNER: ${{ secrets.GITHUB_ACTOR }}
